@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Laboratorio_5
 {
-    internal class TrabajoE
+    internal class NSueldo
     {
         public int NumeroE { get; set; }
-        public int Horasmes { get; set; }
-        public string mes { get; set; }
+        public string NombreE { get; set; }
+        public decimal Total_Sueldo { get; set; }
     }
 }
