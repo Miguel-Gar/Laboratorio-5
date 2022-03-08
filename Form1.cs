@@ -66,7 +66,6 @@ namespace Laboratorio_5
                 mostrar();
         }
 
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -93,6 +92,42 @@ namespace Laboratorio_5
             dataGridView3.DataSource = null;
             dataGridView3.Refresh();
             dataGridView3.DataSource = sueldonuevo;
+        }
+        private string[] Getnombre()
+        {
+            var envolveN = new string[sueldonuevo.Count];
+            for (int i = 0; i < sueldonuevo.Count; i++)
+            {
+                envolveN[i] = sueldonuevo[i].NombreE;
+            }
+            return envolveN;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Getnombre();
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int p = sueldonuevo.FindIndex(t => t.NombreE == comboBox1.Text);
+            if (p == -1)
+            {
+                NSueldo dire = new NSueldo();
+                dire.NumeroE = 1;
+                dire.NombreE = "6";
+                dire.Total_Sueldo = 1;
+                sueldonuevo.Add(dire);
+            }
+            else
+            {
+                textBox1.Text = sueldonuevo[p].NumeroE.ToString()+ " -- " + sueldonuevo[p].NombreE.ToString()+ " --" +sueldonuevo[p].Total_Sueldo.ToString();
+            }
         }
     }
 }
