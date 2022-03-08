@@ -126,7 +126,7 @@ namespace Laboratorio_5
             }
             else
             {
-                textBox1.Text = sueldonuevo[p].NumeroE.ToString()+ " -- " + sueldonuevo[p].NombreE.ToString()+ " --" +sueldonuevo[p].Total_Sueldo.ToString();
+                textBox1.Text = sueldonuevo[p].NumeroE.ToString()+ " -- " + sueldonuevo[p].NombreE.ToString()+ " -- " +sueldonuevo[p].Total_Sueldo.ToString();
             }
         }
     }
